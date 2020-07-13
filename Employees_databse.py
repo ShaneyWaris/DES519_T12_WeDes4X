@@ -1,6 +1,6 @@
 from flask_pymongo import PyMongo
 import bson
-from main import app
+# from main import app
 
 # app.config["MONGO_URI"] = "mongodb+srv://test:test@cluster0.cxhd5.mongodb.net/test?retryWrites=true&w=majority"
 # # connection = MongoClient("mongodb+srv://test:test@cluster0.cxhd5.mongodb.net/test?retryWrites=true&w=majority")

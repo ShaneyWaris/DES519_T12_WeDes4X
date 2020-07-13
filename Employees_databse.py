@@ -1,5 +1,5 @@
-import pymongo as M
-import bson as bs
+import pymongo
+import bson
 
 # connection = MongoClient("mongodb+srv://test:test@cluster0.cxhd5.mongodb.net/test?retryWrites=true&w=majority")
 

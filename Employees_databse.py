@@ -1,8 +1,11 @@
-# import pymongo
-# import bson
+from flask_pymongo import PyMongo
+import bson
+from main import app
 
+app.config["MONGO_URI"] = "mongodb+srv://test:test@cluster0.cxhd5.mongodb.net/test?retryWrites=true&w=majority"
 # connection = MongoClient("mongodb+srv://test:test@cluster0.cxhd5.mongodb.net/test?retryWrites=true&w=majority")
 
+mongo = PyMongo(app)
 # Employees_database = connection.get_database('Employees_DB')	# to fetch the database
 
 # Employees_collection = Employees_database.Employees_record # this is the collection object

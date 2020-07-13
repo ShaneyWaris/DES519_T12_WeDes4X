@@ -1,6 +1,4 @@
 from flask import Flask, render_template, request, url_for, redirect
-# import pymongo
-import bson
 import Employees_databse
 # import Employer_database
 import os

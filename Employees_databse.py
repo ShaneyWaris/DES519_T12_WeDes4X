@@ -1,5 +1,5 @@
-from pymongo import MongoClient
-from bson import ObjectId
+# from pymongo import MongoClient
+# from bson import ObjectId
 
 # connection = MongoClient("mongodb+srv://test:test@cluster0.cxhd5.mongodb.net/test?retryWrites=true&w=majority")
 
@@ -36,4 +36,3 @@ from bson import ObjectId
 # 			return False, "Invalid Password"
 # 	except TypeError:
 # 		return False, "Invalid Email"
-

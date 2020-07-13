@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request, url_for, redirect
-from Employees_databse import *
-from Employer_database import *
+import Employees_databse
+import Employer_database
 import os
 
 # Flask app.
@@ -15,7 +15,7 @@ Employee_sector = ""
 # Employee Common Variables.
 Employee_name  = ""
 Employee_username = ""
-Employee_email = ""
+Employee_email = "",
 Employee_skills = ""
 Employee_phone = ""
 Employee_password = ""

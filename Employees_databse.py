@@ -1,4 +1,4 @@
-from flask_pymongo import PyMongo
+import flask_pymongo
 # import bson
 # from main import app
 

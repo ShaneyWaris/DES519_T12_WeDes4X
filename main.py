@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, url_for, redirect
-from .employees_databse import *
+import employees_databse
 # import Employer_database
 import os
 

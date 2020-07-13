@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request, url_for, redirect
-from Employees_databse import *
-from Employer_database import *
+# from Employees_databse import *
+# from Employer_database import *
 import os
 
 # Flask app.
@@ -164,7 +164,7 @@ def EmployeeOrganized():
 		Employee_phone = request.form.get('Phone')
 		Employee_password = request.form.get('Password')
 
-		add_Employee_Organized()
+		# add_Employee_Organized()
 		return redirect(url_for('login'))
 
 	return render_template('EmployeeOrganized.html')
@@ -183,7 +183,7 @@ def EmployeeUnorganized():
 		Employee_phone = request.form.get('Phone')
 		Employee_password = request.form.get('Password')
 
-		add_Employee_Unorganized()
+		# add_Employee_Unorganized()
 		return redirect(url_for('login'))
 
 	return render_template('EmployeeUnorganized.html')
@@ -208,7 +208,7 @@ def Employer():
 		Employer_phone = request.form.get('Phone')
 		Employer_website = request.form.get('Website')
 
-		add_Employer()
+		# add_Employer()
 		return redirect(url_for('login'))
 
 	return render_template('Employer.html')
@@ -227,7 +227,7 @@ def add_Employer():
 	    'Phone_no': Employer_phone,
 	    'Website': Employer_website
 	}
-    Employers_insert_data(data)
+    # Employers_insert_data(data)
 
 
 def add_Employee_Organized():
@@ -244,7 +244,7 @@ def add_Employee_Organized():
 		'Phone_no': Employee_phone,
 		'Password': Employee_password
 	}
-	Employees_insert_data(data)
+	# Employees_insert_data(data)
 
 def add_Employee_Unorganized():
 	data = {
@@ -257,7 +257,7 @@ def add_Employee_Unorganized():
 		'Phone_no': Employee_phone,
 		'Password': Employee_password
 	}
-	Employees_insert_data(data)
+	# Employees_insert_data(data)
 
 
 @app.route('/login', methods=['POST', 'GET'])
@@ -265,31 +265,18 @@ def login():
 	if (request.method == 'POST'):
 		Email = request.form.get('email')
 		Password = request.form.get('password')
-		print("**********")
-		result, current_user = Authentication(Email, Password)
-		if(result):
-			return render_template('index.html', user = current_user)
-		if (not result and current_user == "Invalid Email"):
-			print("Invalid Email Id")
-			return render_template('login.html')
-		if(not result and current_user == "Invalid Pasword"):
-			print("Invalid Password")
-			return render_template('login.html')
+		# print("**********")
+		# result, current_user = Authentication(Email, Password)
+		# if(result):
+		# 	return render_template('index.html', user = current_user)
+		# if (not result and current_user == "Invalid Email"):
+		# 	print("Invalid Email Id")
+		# 	return render_template('login.html')
+		# if(not result and current_user == "Invalid Pasword"):
+		# 	print("Invalid Password")
+		# 	return render_template('login.html')
 
 	return render_template('login.html')
-
-
-@app.route('/contactUs', methods=['POST', 'GET'])
-def Contact():
-	if (request.method == 'POST'):
-		"""Add entry to the database here"""
-		YourName = request.form.get('name')
-		YourEmail = request.form.get('email')
-		Subject = request.form.get('subject')
-		Message = request.form.get('message')
-
-	return render_template('contactUs.html')
-
 
 
 if __name__ == '__main__':

@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request, url_for, redirect
-# from Employees_databse import *
-# from Employer_database import *
+from Employees_databse import *
+from Employer_database import *
 import os
 
 # Flask app.

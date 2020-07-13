@@ -1,0 +1,122 @@
+{% extends "Layout_Employer.html" %}
+{% block body %}
+
+        <div class="page-wrapper">
+            <div class="content">
+                <div class="row">
+                    <div class="col-sm-8 col-6">
+                        <h4 class="page-title">Take your Interviews</h4>
+                    </div>
+                    <br><br><br>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="table-responsive">
+                            <table class="table table-striped custom-table mb-0 datatable">
+                                <thead>
+                                    <tr>
+                                        <th>Applicant Name</th>
+                                        <th>Job Title</th>
+                                        <th>Job Type</th>
+                                        <th>Job Level</th>
+                                        <th>Meeting Date</th>
+                                        <th>Meeting Time</th>
+                                        <th>Select</th>
+
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <a href="{{url_for('EmployeeProfile')}}" class="avatar">
+                                                <img src="{{url_for( 'static', filename='assets/img/profile.jpg' )}} "></a>
+                                            <h2>
+                                                <a href="{{url_for('EmployeeProfile')}}">Shaney Waris <div class="doc-prof"></div>
+                                                </a>
+                                            </h2>
+
+                                        </td>
+                                        <td>
+                                            ML Engineer
+                                        </td>
+                                        <td>
+                                            <a class="custom-badge status-blue " href="#" aria-expanded="false">
+                                                Technical Job
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <a class="custom-badge status-orange " href="#" aria-expanded="false">
+                                                Entry Level
+                                            </a>
+                                        </td>
+                                        <td>
+                                            24 August 2020
+                                        </td>
+                                        <td>
+                                            11:00 AM
+                                        </td>
+                                        <td class="text-left">
+                                            <a href="{{url_for('startMeetingEmployer')}}" class="btn btn-outline-primary take-btn">Start Meeting</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <a href="{{url_for('EmployeeProfile')}}" class="avatar">
+                                                <img src="{{url_for( 'static', filename='assets/img/profile1.jpg' )}} "></a>
+                                            <h2>
+                                                <a href="{{url_for('EmployeeProfile')}}">Srijan Jain <div class="doc-prof"></div>
+                                                </a>
+                                            </h2>
+
+                                        </td>
+                                        <td>
+                                            Android Developer
+                                        </td>
+                                        <td>
+                                            <a class="custom-badge status-blue " href="#" aria-expanded="false">
+                                                Technical Job
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <a class="custom-badge status-red " href="#" aria-expanded="false">
+                                                Senior Level
+                                            </a>
+                                        </td>
+                                        <td>
+                                            26 August 2020
+                                        </td>
+                                        <td>
+                                            03:00 PM
+                                        </td>
+                                        <td class="text-left">
+                                            <a href="{{url_for('startMeetingEmployer')}}" class="btn btn-outline-primary take-btn">Start Meeting</a>
+                                        </td>
+                                    </tr>
+
+
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="delete_approve" class="modal fade delete-modal" role="dialog">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-body text-center">
+                        <img src="assets/img/sent.png" alt="" width="50" height="46">
+                        <h3>Are you sure want to delete this Leave Request?</h3>
+                        <div class="m-t-20"> <a href="#" class="btn btn-white" data-dismiss="modal">Close</a>
+                            <button type="submit" class="btn btn-danger">Delete</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+{% endblock %}
